@@ -1,0 +1,21 @@
+
+<h3>Please Enter your Name:</h3>
+
+<form [formGroup]="InfoForm" (ngSubmit)="onSubmit()">
+  <p>First Name: <input [ngModel]="fName" id="Fname" type="text" formControlName="Fname"  placeholder="Enter your first name"></p>
+  <p>Last Name: <input [ngModel]="lName" id="Lname" type="text" formControlName="Lname" placeholder="Enter your last name"></p>
+  <p>Birthay Year: <input [value]=" " id="Uyear" type="number" formControlName="Uyear" placeholder="Enter birthday year here"></p>
+  
+  <p>Email: <input type="email" name="email" ng-model="email" required>
+    <span ng-show="myForm.email.$Invalid.required">Email is required.</span>
+    <span ng-show="myForm.email.$Invalid.email">Invalid email address.</span>
+  </p>
+
+  <button (click)="onSubmit" class="button" type="submit">Submit</button>
+</form>
+
+<br>
+
+<h3>Full Name: {{ fName + ' ' + lName }} </h3>
+<h3>your age: {{ age }}</h3>
+<h3>My Url is: {{ myUrl }} </h3>
